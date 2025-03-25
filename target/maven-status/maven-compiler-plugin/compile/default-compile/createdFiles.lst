@@ -1,1 +1,5 @@
-com\cursotdd\App.class
+com\cursotdd\Usuario.class
+com\cursotdd\Placar.class
+com\cursotdd\Ponto.class
+com\cursotdd\Armazenamento.class
+com\cursotdd\ColecaoDePontos.class
