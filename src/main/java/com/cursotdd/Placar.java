@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Placar {
+    
+    //TODO passar esse usuarios para o armazenamento
     List<Usuario> usuarios = new ArrayList<>();
     private static final Armazenamento armazenamento = new Armazenamento();
 
