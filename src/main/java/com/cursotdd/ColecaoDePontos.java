@@ -19,4 +19,14 @@ public class ColecaoDePontos {
 
         pontos.add(new Ponto(tipo));
     }
+    public void receberPonto(Ponto ponto){
+        for (Ponto p : pontos) {
+            if(p.getTipo().equals(ponto.getTipo())){
+                p.sumCount(ponto.getCount());
+                return;
+            }
+        }
+
+        pontos.add(ponto);
+    }
 }

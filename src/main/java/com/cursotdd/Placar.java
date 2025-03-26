@@ -1,18 +1,27 @@
 package com.cursotdd;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Placar {
     List<Usuario> usuarios = new ArrayList<>();
-    
-    public void iniciar() { };
+    private static final Armazenamento armazenamento = new Armazenamento();
+
+    public Placar(){
+
+    }
+
+    public Placar(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
 
     public List<Usuario> getUsuarios() { 
         return usuarios; 
     };
 
-    public void adicionarUsuario(Usuario usuario) {
+    public void adicionarUsuario(Usuario usuario) throws IOException {
         usuarios.add(usuario);
+        armazenamento.salvar(this);
     };
 
     public Usuario getUsuario(String nome){
@@ -22,10 +31,11 @@ public class Placar {
             .orElse(null);
     }
 
-    public void adicionarPontoAUsuario(String ponto, String nome){
+    public void adicionarPontoAUsuario(String ponto, String nome) throws IOException {
         for(Usuario usuario : usuarios){
             if(usuario.getNome().equals(nome)){
                 usuario.receberPonto(ponto);
+                armazenamento.salvar(this);
                 return;
             }
         }
@@ -33,8 +43,12 @@ public class Placar {
         throw new RuntimeException("Usuário não encontrado");
     }
 
-    public String pontosDoUsuario(String nome){
-        return nome;
+    public List<Ponto> pontosDoUsuario(String nome){
+        return usuarios.stream()
+            .filter(u -> u.getNome().equals(nome))
+            .findFirst()
+            .map(u -> u.getPontos())
+            .orElse(null);
     }
 
     public List<Usuario> rankingPorPonto(String ponto){

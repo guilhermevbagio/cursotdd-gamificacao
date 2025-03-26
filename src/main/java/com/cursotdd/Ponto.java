@@ -22,6 +22,10 @@ public class Ponto {
         count++;
     }
     
+    public void sumCount(int arg){
+        count += arg;
+    }
+
     public void decrementCount() {
         count--;
     }

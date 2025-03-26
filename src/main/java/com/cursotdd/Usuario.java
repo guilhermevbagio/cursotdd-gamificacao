@@ -15,11 +15,10 @@ public class Usuario {
 
     public Ponto getPonto(String arg) {
         return colecao.getPontos().stream()
-                .findFirst()
                 .filter(ponto -> ponto.getTipo().equals(arg))
+                .findFirst()
                 .orElse(null);
     }
-
     public List<Ponto> getPontos(){
         return colecao.getPontos();
     }
@@ -28,4 +27,7 @@ public class Usuario {
         colecao.receberPonto(ponto);
     }
 
+    public void receberPonto(Ponto ponto){
+        colecao.receberPonto(ponto);
+    }
 }

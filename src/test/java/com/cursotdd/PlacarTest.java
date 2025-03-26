@@ -1,5 +1,6 @@
 package com.cursotdd;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,7 +16,6 @@ public class PlacarTest {
     @BeforeEach
     public void iniciarPlacar() {
         placar = new Placar();
-        placar.iniciar();
     }
     
     @Test
@@ -25,13 +25,13 @@ public class PlacarTest {
     }
 
     @Test
-    public void deveAdicionarUmUsuario() {
+    public void deveAdicionarUmUsuario() throws IOException {
         placar.adicionarUsuario(new Usuario("Sergio"));
         List<Usuario> usuarios = placar.getUsuarios();
         assert usuarios.size() == 1;
     }
     @Test
-    public void deveAdicionarVinteUsuarios(){
+    public void deveAdicionarVinteUsuarios() throws IOException {
         for (int i = 0; i < 20; i++) {
             placar.adicionarUsuario(new Usuario(Integer.toString(i)));
         }
@@ -40,7 +40,7 @@ public class PlacarTest {
     }
 
     @Test
-    public void deveRegistrarPontosAUsuario(){
+    public void deveRegistrarPontosAUsuario() throws IOException{
         Usuario usuario = new Usuario("Sergio");
         placar.adicionarUsuario(usuario);
         placar.adicionarPontoAUsuario("a", "Sergio");
@@ -54,7 +54,7 @@ public class PlacarTest {
     }
     
     @Test
-    public void deveRetornarPlacarPorPonto()
+    public void deveRetornarPlacarPorPonto() throws IOException
     {
         //cria 20 usuarios
         for(int j = 0; j < 20; j++){
@@ -72,5 +72,21 @@ public class PlacarTest {
         for(int i = 0; i < ranking.size() - 1; i++){
             assert (  ranking.get(i).getPonto("a").getCount() >= ranking.get(i + 1).getPonto("a").getCount()  );
         }
+    }
+
+    @Test
+    public void deveRetornarPontosDoUsuario() throws IOException
+    {
+        placar.adicionarUsuario(new Usuario("Sergio"));
+        placar.adicionarPontoAUsuario("a",  "Sergio");
+        placar.adicionarPontoAUsuario("b",  "Sergio");
+        placar.adicionarPontoAUsuario("c",  "Sergio");
+        placar.adicionarPontoAUsuario("didi",  "Sergio");
+        placar.adicionarPontoAUsuario("e",  "Sergio");
+        placar.adicionarPontoAUsuario("f",  "Sergio");
+
+        List<Ponto> pontos = placar.pontosDoUsuario("Sergio");
+        assert pontos.size() == 6; 
+        assert pontos.stream().anyMatch(ponto -> ponto.getTipo().equals("didi"));
     }
 }
