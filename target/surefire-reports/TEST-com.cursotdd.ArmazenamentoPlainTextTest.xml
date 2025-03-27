@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.cursotdd.ArmazenamentoTest" time="0.582" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.cursotdd.ArmazenamentoPlainTextTest" time="0.688" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Users\guivi\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\guivi\AppData\Local\Temp\surefire5716951287873712318\surefirebooter16280642225398107851.jar C:\Users\guivi\AppData\Local\Temp\surefire5716951287873712318 2025-03-27T08-46-08_674-jvmRun1 surefire1675981065856851324tmp surefire_02080763007467849419tmp"/>
+    <property name="sun.java.command" value="C:\Users\guivi\AppData\Local\Temp\surefire8524264647099949311\surefirebooter16036982481217229564.jar C:\Users\guivi\AppData\Local\Temp\surefire8524264647099949311 2025-03-27T09-09-31_879-jvmRun1 surefire9364368699810030173tmp surefire_016872858028791779935tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="${packageClassName}"/>
     <property name="surefire.test.class.path" value="C:\Users\guivi\Desktop\git projects\cursotdd-gamificacao\gamificacao\target\test-classes;C:\Users\guivi\Desktop\git projects\cursotdd-gamificacao\gamificacao\target\classes;C:\Users\guivi\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.0\junit-jupiter-5.6.0.jar;C:\Users\guivi\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\guivi\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\guivi\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\guivi\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\guivi\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\guivi\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\guivi\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\guivi\AppData\Local\Temp\surefire5716951287873712318\surefirebooter16280642225398107851.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\guivi\AppData\Local\Temp\surefire8524264647099949311\surefirebooter16036982481217229564.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+7-LTS"/>
@@ -61,11 +61,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="deveCarregarDados" classname="com.cursotdd.ArmazenamentoTest" time="0.023"/>
-  <testcase name="deveRetornarPontosDoUsuario" classname="com.cursotdd.ArmazenamentoTest" time="0.008"/>
-  <testcase name="deveRetornarQuantosPontosDoTipoUmUsuarioTem" classname="com.cursotdd.ArmazenamentoTest" time="0.009"/>
-  <testcase name="deveRetornarTodosUsuariosComPontos" classname="com.cursotdd.ArmazenamentoTest" time="0.01"/>
-  <testcase name="dadosCarregadosDevemSerIguaisOsSalvos" classname="com.cursotdd.ArmazenamentoTest" time="0.088"/>
-  <testcase name="dadosCarregadosDevemSerIguaisOsSalvos2" classname="com.cursotdd.ArmazenamentoTest" time="0.357"/>
-  <testcase name="deveSalvarDados" classname="com.cursotdd.ArmazenamentoTest" time="0.075"/>
+  <testcase name="deveCarregarDados" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.025"/>
+  <testcase name="deveRetornarPontosDoUsuario" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.007"/>
+  <testcase name="deveRetornarQuantosPontosDoTipoUmUsuarioTem" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.058"/>
+  <testcase name="deveRetornarTodosUsuariosComPontos" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.011"/>
+  <testcase name="dadosCarregadosDevemSerIguaisOsSalvos" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.077"/>
+  <testcase name="dadosCarregadosDevemSerIguaisOsSalvos2" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.463"/>
+  <testcase name="deveSalvarDados" classname="com.cursotdd.ArmazenamentoPlainTextTest" time="0.036"/>
 </testsuite>

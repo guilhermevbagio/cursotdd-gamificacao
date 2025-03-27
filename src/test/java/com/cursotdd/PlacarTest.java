@@ -16,6 +16,7 @@ public class PlacarTest {
     @BeforeEach
     public void iniciarPlacar() {
         placar = new Placar();
+        placar.setArmazenamento(new MockArmazenamento());
     }
     
     @Test

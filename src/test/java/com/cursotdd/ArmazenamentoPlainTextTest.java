@@ -7,8 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-public class ArmazenamentoTest {
-    private Armazenamento armazenamento;
+public class ArmazenamentoPlainTextTest {
+    private ArmazenamentoPlainText armazenamento;
 
     String[] nomes = {
         "Alice", "Bruno", "Carlos", "Daniel", "Eduarda", 
@@ -24,7 +24,7 @@ public class ArmazenamentoTest {
 
     @BeforeEach
     public void iniciar(){
-        armazenamento = new Armazenamento();
+        armazenamento = new ArmazenamentoPlainText();
     }
 
     @Test

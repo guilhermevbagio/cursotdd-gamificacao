@@ -5,21 +5,39 @@ import java.util.List;
 
 public class Placar {
     
-    //TODO passar esse usuarios para o armazenamento
     List<Usuario> usuarios = new ArrayList<>();
-    private static final Armazenamento armazenamento = new Armazenamento();
+    private Armazenamento armazenamento = new ArmazenamentoPlainText();
 
     public Placar(){
+        try{
+            armazenamento.limpar();
+        }catch(IOException e){
+
+        }
 
     }
-
+    
     public Placar(List<Usuario> usuarios) {
         this.usuarios = usuarios;
+        salvar();
+    }
+
+    public void salvar() {
+        try{
+            armazenamento.salvar(this);
+        }
+        catch(IOException e){
+
+        }
     }
 
     public List<Usuario> getUsuarios() { 
         return usuarios; 
     };
+
+    public void setArmazenamento(Armazenamento armazenamento) {
+        this.armazenamento = armazenamento;
+    }
 
     public void adicionarUsuario(Usuario usuario) throws IOException {
         usuarios.add(usuario);
